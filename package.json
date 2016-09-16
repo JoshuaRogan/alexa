@@ -1,0 +1,37 @@
+{
+  "name": "alexa",
+  "version": "1.0.0",
+  "description": "A base class for interfacing with alexa.",
+  "main": "dist/Alexa.js",
+  "scripts": {
+    "build": "rm -f dist/* && babel src -d dist --source-maps",
+    "test": "npm run build && jasmine dist/*.spec.js",
+    "app": "npm run build && node dist/Alexa.js",
+    "prepublish": "npm run build"
+  },
+  "pre-commit": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaRogan/sony-bravia-remote.git"
+  },
+  "keywords": [
+    "amazon",
+    "alex",
+    "node"
+  ],
+  "author": "Josh Rogan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshuaRogan/sony-bravia-remote/issues"
+  },
+  "homepage": "https://github.com/JoshuaRogan/sony-bravia-remote#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "jasmine": "^2.5.1",
+    "pre-commit": "^1.1.3"
+  }
+}
